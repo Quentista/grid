@@ -6,7 +6,6 @@
 class SmallGrid;
 class QPushButton;
 class QLineEdit;
-class QSignalMapper;
 
 class MainWindow : public QWidget
 {
@@ -23,9 +22,7 @@ public slots:
 private:
 	
 	SmallGrid* m_SGrid;
-	
 	QPushButton* m_createButton;
-	QSignalMapper* m_mapper;
 };
 
 #endif // MAINWINDOW_H

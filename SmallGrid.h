@@ -14,16 +14,15 @@ public:
 signals:
 	
 public slots:
-	void setScale(int s);
 	
 protected:
 	
 	virtual void paintEvent(QPaintEvent * evt);
+	virtual void wheelEvent(QWheelEvent *evt);
 	
 private:
 	
-	QColor m_array [3];
-	
+	QColor m_array [3][2];
 	int m_scale;
 };
 
