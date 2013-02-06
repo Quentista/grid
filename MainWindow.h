@@ -19,10 +19,14 @@ public:
 	
 public slots:
 	
+	void createNew();
+	
 private:
 	
 	SmallGrid* m_SGrid;
 	QPushButton* m_createButton;
+	QLineEdit* m_newWidth;
+	QLineEdit* m_newHeight;
 };
 
 #endif // MAINWINDOW_H
