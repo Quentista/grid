@@ -18,14 +18,13 @@ SmallGrid::SmallGrid(QWidget *parent) :
 	m_width = 3;
 	m_height = 2;
 	
-	ptr = new QColor(Qt::red);
+
 	
 
 }
 
 SmallGrid::~SmallGrid()
 {
-	delete []ptr;
 }
 
 /*virtual*/ void SmallGrid::paintEvent(QPaintEvent *evt)
@@ -39,8 +38,7 @@ SmallGrid::~SmallGrid()
 		for(int j=0; j<m_height; ++j)
 		{			
 
-//			painter.setBrush(QBrush(m_array[0][0]));
-			painter.setBrush(QBrush(ptr[i*j]));
+			painter.setBrush(QBrush(m_array[0][0]));
 			painter.drawRect(QRect(i*m_scale, j*m_scale, m_scale, m_scale));
 			
 		}
@@ -60,12 +58,7 @@ void SmallGrid::recreate(int width, int height)
 	m_width = width;
 	m_height = height;
 	
-	ptr = new QColor[width*height];
-	
-	ptr[0] = QColor(Qt::red);
-	ptr[1] = QColor(Qt::green);
-	ptr[2] = QColor(Qt::blue);
-	ptr[3] = QColor(Qt::yellow);
+
 	
 	this->repaint();
 }

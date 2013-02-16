@@ -23,9 +23,7 @@ protected:
 	virtual void wheelEvent(QWheelEvent *evt);
 	
 private:
-	QColor* ptr;
-	
-	
+
 	
 	QColor m_array [3][2];
 	int m_scale;
