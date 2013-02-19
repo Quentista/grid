@@ -24,6 +24,8 @@ protected:
 	virtual void mousePressEvent(QMouseEvent *evt);
 	
 private:
+	int* m_array;
+	
 	int m_scale;
 	int m_width;
 	int m_height;
