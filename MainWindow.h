@@ -3,7 +3,8 @@
 
 #include <QWidget>
 
-class SmallGrid;
+//class SmallGrid;
+class LargeGrid;
 class QPushButton;
 class QLineEdit;
 
@@ -23,8 +24,10 @@ public slots:
 	
 private:
 	
-	SmallGrid* m_SGrid;
+	//SmallGrid* m_SGrid;
+	LargeGrid* m_LGrid;
 	QPushButton* m_createButton;
+	QPushButton* m_colorButton;
 	QLineEdit* m_newWidth;
 	QLineEdit* m_newHeight;
 };
