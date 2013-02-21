@@ -12,11 +12,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         MainWindow.cpp \
-    SmallGrid.cpp \
     LargeGrid.cpp
 
 HEADERS  += MainWindow.h \
-    SmallGrid.h \
     LargeGrid.h
 
 OBJECTS_DIR = .obj
