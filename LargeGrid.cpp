@@ -3,6 +3,7 @@
 #include <QPainter>
 #include <QWheelEvent>
 #include <QColor>
+#include <QPixmap>
 
 LargeGrid::LargeGrid(QWidget *parent) :
 	QWidget(parent)
@@ -11,6 +12,12 @@ LargeGrid::LargeGrid(QWidget *parent) :
 	m_width = 3;
 	m_height = 2;
 	m_array = new int [6];
+	
+	pix = new QPixmap("./1.jpg");
+//	pix->scaled(m_scale, m_scale,
+//				Qt::AspectRatioMode = Qt::IgnoreAspectRatio,
+//				Qt::TransformationMode = Qt::FastTransformation);
+	
 
 	
 }
@@ -24,11 +31,10 @@ LargeGrid::~LargeGrid()
 	QPainter painter;
 	painter.begin(this);
 
-	for(int i =0; i<m_width; ++i)
+	for(int i =0; i<m_height; ++i)
 	{
-		for(int j=0; j<m_height; ++j)
+		for(int j=0; j<m_width; ++j)
 		{			
-			//if(i==x_pos && j==y_pos)
 			if (m_array[i*m_width +j]==1)
 			{
 				painter.setBrush(QBrush(Qt::red));
@@ -67,6 +73,10 @@ void LargeGrid::recreate(int width, int height)
 	m_height = height;
 	
 	m_array = new int[m_width*m_height];
+	for (int w=0; w<(m_width*m_height); ++w)
+	{
+		m_array[w] =0;
+	}
 
 	this->repaint();
 }

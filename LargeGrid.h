@@ -4,6 +4,7 @@
 #include <QWidget>
 
 class QColor;
+class QPixmap;
 
 class LargeGrid : public QWidget
 {
@@ -31,6 +32,8 @@ private:
 	int m_height;
 	int x_pos;
 	int y_pos;
+	
+	QPixmap* pix;
 
 };
 

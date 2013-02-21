@@ -1,6 +1,5 @@
 #include "MainWindow.h"
 
-#include "SmallGrid.h"
 #include "LargeGrid.h"
 
 #include <QVBoxLayout>
@@ -10,7 +9,6 @@
 
 MainWindow::MainWindow(QWidget *parent)
 	: QWidget(parent)
-//	, m_SGrid(new SmallGrid)
 	, m_LGrid(new LargeGrid)
 	, m_createButton(new QPushButton("create"))
 	, m_colorButton(new QPushButton("Color"))
@@ -25,7 +23,6 @@ MainWindow::MainWindow(QWidget *parent)
 	
 	QVBoxLayout* mainLayout = new QVBoxLayout;
 	mainLayout->setMargin(0);
-//	mainLayout->addWidget(m_SGrid);
 	mainLayout->addWidget(m_LGrid);
 	mainLayout->addWidget(m_newWidth);
 	mainLayout->addWidget(m_newHeight);
