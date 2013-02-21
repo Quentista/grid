@@ -45,6 +45,5 @@ void MainWindow::createNew()
 	int height = m_newHeight->text().toInt(& ok);
 	if (!ok) return;
 	
-//	m_SGrid->recreate(width, height);
 	m_LGrid->recreate(width, height);
 }

@@ -14,12 +14,7 @@ LargeGrid::LargeGrid(QWidget *parent) :
 	m_array = new int [6];
 	
 	pix = new QPixmap("./1.jpg");
-//	pix->scaled(m_scale, m_scale,
-//				Qt::AspectRatioMode = Qt::IgnoreAspectRatio,
-//				Qt::TransformationMode = Qt::FastTransformation);
-	
 
-	
 }
 LargeGrid::~LargeGrid()
 {
@@ -37,8 +32,7 @@ LargeGrid::~LargeGrid()
 		{			
 			if (m_array[i*m_width +j]==1)
 			{
-				painter.setBrush(QBrush(Qt::red));
-				painter.drawRect(QRect(i*m_scale, j*m_scale, m_scale, m_scale));
+				painter.drawPixmap(i*m_scale,j*m_scale,m_scale,m_scale, *pix);
 			}
 			else
 			{
